@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <style>
+h1 {
+	background-color: #6495ed;
+}
+
+th {
+	background-color: #b0c4de;
+}
+</style>
+  </head>
+  <body bgcolor="grey">
+
+	<div align="center">
+		<h1>Gradesheet</h1>
+	</div>
+
+	<div align="center">
+		<div style="height: 400px; width: 900px;">
+
+      <form id="eval-quiz-form">
+          <div id="quizes-div">
+                    {% for item in quizes %}
+            <input id="btn-{{item.id}}" type="radio" name="quizes" value="{{item.title}}"> {{item.title}}
+                    {% endfor %}
+        </div>
+
+        <div id="quiz-div">
+        </div>
+	<div align="Right">
+        <a href="/logout" class="btn btn-info btn-lg" align = "left">
+          <span class="glyphicon glyphicon-log-out"></span> Log out
+    </a></div>
+<div style="height: 300px; width: 200px;">
+      <div id="quiz-quiestions"></div>
+      <div id="quiz-final-total"></div>
+
+
+    <form id="eval-form">
+        <p><input id="btn-check-answer" type="button" value="Done"/></p>
+    </form>
+
+    </div>
+
+    <script src="/js/client.js" language="javascript"></script>
+    <script type="text/javascript" language="javascript">
+      trivia.client.main()
+    </script>
+    </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+{
+	"title": "Quiz 1",
+	"exam-version": "0.1",
+	"exam-number": "1",
+	"questions": [{
+		"q": "2014 FIFA World Cup organized by ?",
+		"c": ["Brazil", "Russia", "India", "South Africa"],
+		"a": "Brazil",
+		"l": "q1"
+	}, {
+		"q": "What is the letter between the letters \"M\" and \"O\"?",
+		"c": ["L", "N", "P", "A"],
+		"a": "N",
+		"l": "q2"
+	}, {
+		"q": "For Validation E-mail address must contain @ ?",
+		"c": ["False", "True"],
+		"a": "True",
+		"l": "q3"
+  }, {
+    "q": "How to subtract 5 from 7 in clojure?",
+    "c": ["(5 - 7)", "(- 7 5)", "(7 5 -)", "(7 - 5)"],
+    "a":"(- 7 5)",
+    "l": "q4"
+  }]
+}

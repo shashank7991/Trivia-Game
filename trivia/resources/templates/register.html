@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<title>Register</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<style>
+h1 {
+	background-color: #6495ed;
+}
+
+th {
+	background-color: #b0c4de;
+}
+</style>
+
+</head>
+<body>
+
+	<div align="center">
+		<h1>Gradesheet</h1>
+	</div>
+
+	<div align="center">
+		<div style="height: 500px; width: 900px;">
+
+			<form id="eval-form" action="check-register" method="post" class="form-horizontal">
+				<br />
+                {% csrf-field %}
+                <input type="hidden" name="number" value="{{ q.number }}" />
+    			<div class="form-group">
+			    	<label class="col-sm-3 control-label">First Name :</label>
+					<div class="col-sm-6">
+						<input type="text" name="firstName" placeholder="First Name" class="col-size-10 form-control" />
+					</div>
+				</div>
+
+                <div class="form-group">
+			    	<label class="col-sm-3 control-label">Last Name :</label>
+					<div class="col-sm-6">
+						<input type="text" name="lastName" placeholder="Last Name" class="col-size-10 form-control" />
+					</div>
+				</div>
+
+                <div class="form-group">
+			    	<label class="col-sm-3 control-label">User Name :</label>
+					<div class="col-sm-6">
+						<input type="text" id="eval-userid" name="username" placeholder="Last Name" class="col-size-10 form-control" /><span id="user-result"></span>
+					</div>
+				</div>
+
+                <div class="form-group">
+			    	<label class="col-sm-3 control-label">Password :</label>
+					<div class="col-sm-6">
+						<input id="eval-password" type="password" name="password" placeholder="Password" class="col-size-10 form-control" /><span id="password-result"></span>
+					</div>
+				</div>
+
+
+                <div class="form-group">
+			    	<label class="col-sm-3 control-label">Confirm Password :</label>
+					<div class="col-sm-6">
+						<input type="password" name="confirmPassword" placeholder="Password" class="col-size-10 form-control" />
+					</div>
+				</div>
+
+                <br /> <input type="submit" value="Submit"
+					class="btn btn-primary btn-lg"></input> <br />
+    </form>
+
+
+                    <script src="/js/client.js" language="javascript"></script>
+                    <script type="text/javascript" language="javascript">
+                        trivia.client.main()
+                    </script>
+
+
+</body>
+</html>

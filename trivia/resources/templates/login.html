@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<title>Login</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<style>
+h1 {
+	background-color: #6495ed;
+}
+
+th {
+	background-color: #b0c4de;
+}
+</style>
+
+</head>
+<body>
+
+	<div align="center">
+		<h1>Gradesheet</h1>
+	</div>
+
+	<div align="center">
+		<div style="height: 500px; width: 900px;">
+
+			<form action="check-login" method="post" class="form-horizontal">
+				<br />
+				<div class="form-group">
+					<label class="col-sm-3 control-label">User Name :</label>
+					<div class="col-sm-6">
+						<input type="text" name="username" placeholder="User Name" class="col-size-10 form-control" />
+					</div>
+				</div>
+
+
+				<div class="form-group">
+					<label class="col-sm-3 control-label">Password :</label>
+					<div class="col-sm-6">
+						<input type="password" name="password" placeholder="Password" class="form-control" />
+        				{% csrf-field %}
+                        <input type="hidden" name="number" value="{{ q.number }}" />
+					</div>
+				</div>
+
+				<br /> <input type="submit" value="Submit"
+					class="btn btn-primary btn-lg"></input> <br />
+
+			</form>
+		</div>
+	</div>
+</body>
+</html>
